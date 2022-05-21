@@ -4,20 +4,22 @@ Apoorva Lal
 
 The Abadie (2005) semiparametric IPW estimator for the 2-period ATT is
 
-![\hat{\tau}^{\text{IPW}} = \frac{1}{N} \sum_i \frac{Y_i(1) - Y_i(0)}{P(D=1)} \frac{D - \hat{e}(X_i)}{1 - \hat{e}(X_i)}](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Chat%7B%5Ctau%7D%5E%7B%5Ctext%7BIPW%7D%7D%20%3D%20%5Cfrac%7B1%7D%7BN%7D%20%5Csum_i%20%5Cfrac%7BY_i%281%29%20-%20Y_i%280%29%7D%7BP%28D%3D1%29%7D%20%5Cfrac%7BD%20-%20%5Chat%7Be%7D%28X_i%29%7D%7B1%20-%20%5Chat%7Be%7D%28X_i%29%7D "\hat{\tau}^{\text{IPW}} = \frac{1}{N} \sum_i \frac{Y_i(1) - Y_i(0)}{P(D=1)} \frac{D - \hat{e}(X_i)}{1 - \hat{e}(X_i)}")
+$$
+\hat{\tau}^{\text{IPW}} = \frac{1}{N} \sum_i \frac{Y_i(1) - Y_i(0)}{P(D=1)} \frac{D - \hat{e}(X_i)}{1 - \hat{e}(X_i)}
+$$
 
 The Chang (2020) double-robust AIPW estimator is
 
-![\hat{\tau}^{\text{AIPW}} = \frac{1}{N} \sum_i \frac{Y_i(1) - Y_i(0)}{P(D=1)} \frac{D - \hat{e}(X_i)}{1 - \hat{e}(X_i)} - \frac{D - \hat{e}(X_i)}{P(D = 1) (1- \hat{e}(X_i) )} \hat{\mathcal{l}}(X_i, D = 0)](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Chat%7B%5Ctau%7D%5E%7B%5Ctext%7BAIPW%7D%7D%20%3D%20%5Cfrac%7B1%7D%7BN%7D%20%5Csum_i%20%5Cfrac%7BY_i%281%29%20-%20Y_i%280%29%7D%7BP%28D%3D1%29%7D%20%5Cfrac%7BD%20-%20%5Chat%7Be%7D%28X_i%29%7D%7B1%20-%20%5Chat%7Be%7D%28X_i%29%7D%20-%20%5Cfrac%7BD%20-%20%5Chat%7Be%7D%28X_i%29%7D%7BP%28D%20%3D%201%29%20%281-%20%5Chat%7Be%7D%28X_i%29%20%29%7D%20%5Chat%7B%5Cmathcal%7Bl%7D%7D%28X_i%2C%20D%20%3D%200%29 "\hat{\tau}^{\text{AIPW}} = \frac{1}{N} \sum_i \frac{Y_i(1) - Y_i(0)}{P(D=1)} \frac{D - \hat{e}(X_i)}{1 - \hat{e}(X_i)} - \frac{D - \hat{e}(X_i)}{P(D = 1) (1- \hat{e}(X_i) )} \hat{\mathcal{l}}(X_i, D = 0)")
 
-where
-![\hat{e}(\cdot)](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Chat%7Be%7D%28%5Ccdot%29 "\hat{e}(\cdot)")
-is the propensity score and
-![\hat{\mathcal{l}}(\cdot)](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Chat%7B%5Cmathcal%7Bl%7D%7D%28%5Ccdot%29 "\hat{\mathcal{l}}(\cdot)")
-is an outcome model for
-![Y(1) - Y(0)](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;Y%281%29%20-%20Y%280%29 "Y(1) - Y(0)")
-regressed on covariates in the untreated subsample. Both these functions
-are estimated using LASSO(`glmnet`).
+$$
+\hat{\tau}^{\text{AIPW}} = \frac{1}{N} \sum_i \frac{Y_i(1) - Y_i(0)}{P(D=1)} \frac{D - \hat{e}(X_i)}{1 - \hat{e}(X_i)} - \frac{D - \hat{e}(X_i)}{P(D = 1) (1- \hat{e}(X_i) )} \hat{\mathcal{l}}(X_i, D = 0)
+$$
+
+
+where $\hat{e}(\cdot)$ is the propensity score and $\hat{\mathcal{l}}(\cdot)$ is
+an outcome model for $Y(1) - Y(0)$ regressed on covariates in the untreated
+subsample. Both these functions are estimated using LASSO(`glmnet`) using
+internal cross-fitting.
 
 ## DGP
 
