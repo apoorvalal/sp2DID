@@ -5,7 +5,7 @@ Difference-in-differences estimation using Abadie (2005) and Chang (2020) IPW an
 Installation 
 
 ```R
-devtools::install.github("apoorvalal/sp2DID")`
+devtools::install_github("apoorvalal/sp2DID")
 ```
 
 
