@@ -1,0 +1,12 @@
+Package: sp2DID
+Version: 0.0.0.666
+Title: sp2DID:Semiparametric two-period difference in differences
+Authors@R: person("Apoorva", "Lal", email = "lal.apoorva@gmail.com", role = c("aut", "cre"))
+Description: Difference-in-differences estimation using Abadie (2005) and Chang (2020) IPW and AIPW estimators. Nuisance functions fit using regularized regression (glmnet). 
+License: MIT + file LICENSE
+Depends:
+    glmnet
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.2.1
+usethis.destdir: ~/Desktop/code

@@ -26,6 +26,7 @@ ipwDID = function(X, D, Y1, Y0, xfit = T){
   (1/mean(D)) * mean((D-ehat)/(1-ehat) * (Y1-Y0))
 }
 
+# %%
 aipwDID = function(X, D, Y1, Y0, xfit = T){
   #' Chang (2020) Double-Robust semiparametric difference in differences
   #' estimator for the ATT fit using LASSO
@@ -36,12 +37,17 @@ aipwDID = function(X, D, Y1, Y0, xfit = T){
   #' @return ATT estimate
   #' @references Abadie(2005), Chang(2020), Zhao and Sant'Anna (2021)
   #' @export
+
+  k_folds = floor(max(3, min(10,length(D)/4)))
+  # fold ID for cross-validation; balance treatment assignments
+  foldid = sample(rep(seq(k_folds), length = length(D)))
+
   # ps model
-  psfit = glmnet::cv.glmnet(X, D, family="binomial", alpha=1, keep = TRUE)
+  psfit = glmnet::cv.glmnet(X, D, family="binomial", alpha=1, foldid = foldid, keep = TRUE)
   # trend model
   index = which(D==0)
   y = Y1[index]-Y0[index]
-  ofit  = glmnet::cv.glmnet(X[index, ], y, alpha=1, keep = TRUE)
+  ofit  = glmnet::cv.glmnet(X[index, ], y, alpha=1, keep = TRUE, foldid = foldid[index])
   if(!xfit){
       ehat = predict(psfit, newx = X, type = "response", s = psfit$lambda.min)
       mhat = predict(ofit,  newx = X, type = "response", s = ofit$lambda.min)
