@@ -16,7 +16,7 @@
     <loc>/index.html</loc>
   </url>
   <url>
-    <loc>/readme.html</loc>
+    <loc>/reference/DID.html</loc>
   </url>
   <url>
     <loc>/reference/aipwDID.html</loc>
@@ -26,5 +26,8 @@
   </url>
   <url>
     <loc>/reference/ipwDID.html</loc>
+  </url>
+  <url>
+    <loc>/reference/omDID.html</loc>
   </url>
 </urlset>

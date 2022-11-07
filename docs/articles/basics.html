@@ -4,271 +4,252 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="sp2DID">
 <title>sp2DID • sp2DID</title>
-<!-- jquery --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script><!-- Bootstrap --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script><!-- bootstrap-toc --><link rel="stylesheet" href="../bootstrap-toc.css">
-<script src="../bootstrap-toc.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
+<script src="../deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="../deps/bootstrap-5.1.3/bootstrap.min.css" rel="stylesheet">
+<script src="../deps/bootstrap-5.1.3/bootstrap.bundle.min.js"></script><link href="../deps/Roboto-0.4.2/font.css" rel="stylesheet">
+<link href="../deps/JetBrains_Mono-0.4.2/font.css" rel="stylesheet">
+<link href="../deps/Roboto_Slab-0.4.2/font.css" rel="stylesheet">
+<!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
-<!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- pkgdown --><link href="../pkgdown.css" rel="stylesheet">
-<script src="../pkgdown.js"></script><meta property="og:title" content="sp2DID">
+<!-- bootstrap-toc --><script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- search --><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- pkgdown --><script src="../pkgdown.js"></script><meta property="og:title" content="sp2DID">
 <meta property="og:description" content="sp2DID">
 <!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script><!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
 </head>
-<body data-spy="scroll" data-target="#toc">
+<body>
+    <a href="#main" class="visually-hidden-focusable">Skip to contents</a>
     
 
-    <div class="container template-article">
-      <header><div class="navbar navbar-default navbar-fixed-top" role="navigation">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <span class="navbar-brand">
-        <a class="navbar-link" href="../index.html">sp2DID</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.0.0.666</span>
-      </span>
-    </div>
+    <nav class="navbar fixed-top navbar-dark navbar-expand-lg bg-primary"><div class="container">
+    
+    <a class="navbar-brand me-2" href="../index.html">sp2DID</a>
 
-    <div id="navbar" class="navbar-collapse collapse">
-      <ul class="nav navbar-nav">
-<li>
-  <a href="../reference/index.html">Reference</a>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.0.0.666</small>
+
+    
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div id="navbar" class="collapse navbar-collapse ms-3">
+      <ul class="navbar-nav me-auto">
+<li class="nav-item">
+  <a class="nav-link" href="../reference/index.html">Reference</a>
 </li>
-<li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-    Articles
-     
-    <span class="caret"></span>
-  </a>
-  <ul class="dropdown-menu" role="menu">
-<li>
-      <a href="../articles/basics.html">sp2DID</a>
-    </li>
-  </ul>
+<li class="active nav-item dropdown">
+  <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown-articles">Articles</a>
+  <div class="dropdown-menu" aria-labelledby="dropdown-articles">
+    <a class="dropdown-item" href="../articles/basics.html">sp2DID</a>
+  </div>
 </li>
       </ul>
-<ul class="nav navbar-nav navbar-right"></ul>
+<form class="form-inline my-2 my-lg-0" role="search">
+        <input type="search" class="form-control me-sm-2" aria-label="Toggle navigation" name="search-input" data-search-index="../search.json" id="search-input" placeholder="Search for" autocomplete="off">
+</form>
+
+      <ul class="navbar-nav">
+<li class="nav-item">
+  <a class="external-link nav-link" href="https://github.com/apoorvalal/sp2DID" aria-label="github">
+    <span class="fab fa fab fa-github fa-lg"></span>
+     
+  </a>
+</li>
+      </ul>
 </div>
-<!--/.nav-collapse -->
+
+    
   </div>
-<!--/.container -->
-</div>
-<!--/.navbar -->
+</nav><div class="container template-article">
 
-      
 
-      </header><div class="row">
-  <div class="col-md-9 contents">
-    <div class="page-header toc-ignore">
-      <h1 data-toc-skip>sp2DID</h1>
+
+<script src="basics_files/accessible-code-block-0.0.1/empty-anchor.js"></script><div class="row">
+  <main id="main" class="col-md-9"><div class="page-header">
+      <img src="" class="logo" alt=""><h1>sp2DID</h1>
             
       
       
-      <div class="hidden name"><code>basics.rmd</code></div>
-
+      <div class="d-none name"><code>basics.rmd</code></div>
     </div>
 
     
     
-<p>The Abadie (2005) semiparametric IPW estimator for the 2-period ATT
-is</p>
+<!--- For HTML renders - selection from math_shortcuts.tex --->
+<p><span class="math inline">\(\DeclareMathOperator*{\argmin}{argmin}\)</span> <span class="math inline">\(\newcommand{\var}{\mathrm{Var}}\)</span> <span class="math inline">\(\newcommand{\epsi}{\varepsilon}\)</span> <span class="math inline">\(\newcommand{\phii}{\varphi}\)</span> <span class="math inline">\(\newcommand{\tra}{^{\top}}\)</span> <span class="math inline">\(\newcommand{\sumin}{\sum_{i=1}^n}\)</span> <span class="math inline">\(\newcommand{\sumiN}{\sum_{i=1}^n}\)</span> <span class="math inline">\(\newcommand{\norm}[1]{\left\Vert{#1} \right\Vert}\)</span> <span class="math inline">\(\newcommand\Bigpar[1]{\left( #1 \right )}\)</span> <span class="math inline">\(\newcommand\Bigbr[1]{\left[ #1 \right ]}\)</span> <span class="math inline">\(\newcommand\Bigcr[1]{\left\{ #1 \right \}}\)</span> <span class="math inline">\(\newcommand\SetB[1]{\left\{ #1 \right\}}\)</span> <span class="math inline">\(\newcommand\Sett[1]{\mathcal{#1}}\)</span> <span class="math inline">\(\newcommand{\Data}{\mathcal{D}}\)</span> <span class="math inline">\(\newcommand{\Ubr}[2]{\underbrace{#1}_{\text{#2}}}\)</span> <span class="math inline">\(\newcommand{\Obr}[2]{ \overbrace{#1}^{\text{#2}}}\)</span> <span class="math inline">\(\newcommand{\sumiN}{\sum_{i=1}^N}\)</span> <span class="math inline">\(\newcommand{\dydx}[2]{\frac{\partial #1}{\partial #2}}\)</span> <span class="math inline">\(\newcommand\Indic[1]{\mathds{1}_{#1}}\)</span> <span class="math inline">\(\newcommand{\Realm}[1]{\mathbb{R}^{#1}}\)</span> <span class="math inline">\(\newcommand{\Exp}[1]{\mathbb{E}\left[#1\right]}\)</span> <span class="math inline">\(\newcommand{\Expt}[2]{\mathbb{E}_{#1}\left[#2\right]}\)</span> <span class="math inline">\(\newcommand{\Var}[1]{\mathbb{V}\left[#1\right]}\)</span> <span class="math inline">\(\newcommand{\Covar}[1]{\text{Cov}\left[#1\right]}\)</span> <span class="math inline">\(\newcommand{\Prob}[1]{\mathbf{Pr}\left(#1\right)}\)</span> <span class="math inline">\(\newcommand{\Supp}[1]{\text{Supp}\left[#1\right]}\)</span> <span class="math inline">\(\newcommand{\doyx}{\Prob{Y \, |\,\mathsf{do} (X = x)}}\)</span> <span class="math inline">\(\newcommand{\doo}[1]{\Prob{Y |\,\mathsf{do} (#1) }}\)</span> <span class="math inline">\(\newcommand{\R}{\mathbb{R}}\)</span> <span class="math inline">\(\newcommand{\Z}{\mathbb{Z}}\)</span> <span class="math inline">\(\newcommand{\wh}[1]{\widehat{#1}}\)</span> <span class="math inline">\(\newcommand{\wt}[1]{\widetilde{#1}}\)</span> <span class="math inline">\(\newcommand{\wb}[1]{\overline{#1}}\)</span> <span class="math inline">\(\newcommand\Ol[1]{\overline{#1}}\)</span> <span class="math inline">\(\newcommand\Ul[1]{\underline{#1}}\)</span> <span class="math inline">\(\newcommand\Str[1]{#1^{*}}\)</span> <span class="math inline">\(\newcommand{\F}{\mathsf{F}}\)</span> <span class="math inline">\(\newcommand{\ff}{\mathsf{f}}\)</span> <span class="math inline">\(\newcommand{\Cdf}[1]{\mathbb{F}\left(#1\right)}\)</span> <span class="math inline">\(\newcommand{\Cdff}[2]{\mathbb{F}_{#1}\left(#2\right)}\)</span> <span class="math inline">\(\newcommand{\Pdf}[1]{\mathsf{f}\left(#1\right)}\)</span> <span class="math inline">\(\newcommand{\Pdff}[2]{\mathsf{f}_{#1}\left(#2\right)}\)</span> <span class="math inline">\(\newcommand{\dd}{\mathsf{d}}\)</span> <span class="math inline">\(\newcommand\Normal[1]{\mathcal{N} \left( #1 \right )}\)</span> <span class="math inline">\(\newcommand\Unif[1]{\mathsf{U} \left[ #1 \right ]}\)</span> <span class="math inline">\(\newcommand\Bern[1]{\mathsf{Bernoulli} \left( #1 \right )}\)</span> <span class="math inline">\(\newcommand\Binom[1]{\mathsf{Bin} \left( #1 \right )}\)</span> <span class="math inline">\(\newcommand\Pois[1]{\mathsf{Poi} \left( #1 \right )}\)</span> <span class="math inline">\(\newcommand\BetaD[1]{\mathsf{Beta} \left( #1 \right )}\)</span> <span class="math inline">\(\newcommand\Diri[1]{\mathsf{Dir} \left( #1 \right )}\)</span> <span class="math inline">\(\newcommand\Gdist[1]{\mathsf{Gamma} \left( #1 \right )}\)</span> <span class="math inline">\(\def\mbf#1{\mathbf{#1}}\)</span> <span class="math inline">\(\def\mrm#1{\mathrm{#1}}\)</span> <span class="math inline">\(\def\mbi#1{\boldsymbol{#1}}\)</span> <span class="math inline">\(\def\ve#1{\mbi{#1}}\)</span> <span class="math inline">\(\def\vee#1{\mathbf{#1}}\)</span> <span class="math inline">\(\newcommand{\Mat}[1]{\mathbf{#1}}\)</span> <span class="math inline">\(\newcommand{\eucN}[1]{\norm{#1}}\)</span> <span class="math inline">\(\newcommand{\lzero}[1]{\norm{#1}_0}\)</span> <span class="math inline">\(\newcommand{\lone}[1]{\norm{#1}_1}\)</span> <span class="math inline">\(\newcommand{\ltwo}[1]{\norm{#1}_2}\)</span> <span class="math inline">\(\newcommand{\pnorm}[1]{\norm{#1}_p}\)</span></p>
+<p>This note extends the simulation study in Chang (2020) and re-implements the estimators considered in efficient R code with the <code>glmnet</code> library.</p>
+<p>Throughout, we write <span class="math inline">\(Y^d(t)\)</span> to denote the potential outcomes <span class="math inline">\(Y^1, Y^0\)</span> at time <span class="math inline">\(t \in \{0, 1\}\)</span> and <span class="math inline">\(Y(t)\)</span> to denote the realised outcome. The estimand is the ATT in the 2nd period <span class="math inline">\(\Exp{Y^1(1) - Y^0(1) | D = 1}\)</span>.</p>
+<p>The <em>conditional</em> parallel trends assumption is written as</p>
 <p><span class="math display">\[
-\hat{\tau}^{\text{IPW}} = \frac{1}{N} \sum_i \frac{Y_i(1) -
-Y_i(0)}{P(D=1)} \frac{D - \hat{e}(X_i)}{1 - \hat{e}(X_i)}
+E\left[Y^{0}(1)-Y^{0}(0) \mid X, D=1\right]=E\left[Y^{0}(1)-Y^{0}(0)
+\mid X, D=0\right]
 \]</span></p>
+<p>Under (c)PT, most well-known difference in differences estimator can be written conditional on <span class="math inline">\(X\)</span> as</p>
+<span class="math display">\[\begin{aligned}
+\hat{\tau}^{\text{OM}} =\{ &amp; \wh{\mathbb{E}}[Y(1) \mid X,
+D=1]-\wh{\mathbb{E}}[Y(1) \mid X, D=0]\} \\ - \{ &amp; \wh{\mathbb{E}}[Y(0) \mid X,
+D=1]-\wh{\mathbb{E}}[Y(0) \mid X, D=0]\}
+\end{aligned}\]</span>
+<p>where the four expectations on the RHS are estimated nonparametrically. This is implemented in <code>omDID</code>.</p>
+<p>The Abadie (2005) semiparametric IPW estimator for the 2-period ATT is</p>
+<p><span class="math display">\[
+\hat{\tau}^{\text{IPW}} = \frac{1}{N} \sum_i Y_i(1) - Y_i(0)
+  \frac{D - \hat{e}(X_i)}{P(D=1) (1 - \hat{e}(X_i) )}
+\]</span></p>
+<p>and is implemented in <code>ipwDID</code>.</p>
+<p>This scheme works by weighting-down the distribution of <span class="math inline">\(Y(1) − Y(0)\)</span> for the untreated for those values of the covariates which are over-represented among the untreated (that is, with low <span class="math inline">\(\hat{e}(X_i)/ (1 - \hat{e}(X_i)\)</span>). Conversely, we are weighting-up <span class="math inline">\(Y(1) − Y(0)\)</span> for those values of the covariates under-represented among the untreated (that is with high <span class="math inline">\(\hat{e}(X_i)/ (1 - \hat{e}(X_i)\)</span>). In this way the same distribution of the covariates is imposed for treated and untreated.</p>
 <p>The Chang (2020) double-robust AIPW estimator is</p>
 <p><span class="math display">\[
-\hat{\tau}^{\text{AIPW}} = \frac{1}{N} \sum_i \frac{Y_i(1) -
-Y_i(0)}{P(D=1)} \frac{D - \hat{e}(X_i)}{1 - \hat{e}(X_i)} - \frac{D -
-\hat{e}(X_i)}{P(D = 1) (1- \hat{e}(X_i) )} \hat{\mathcal{l}}(X_i, D = 0)
+\hat{\tau}^{\text{AIPW}} = \frac{1}{N} \sum_i
+  \Bigpar{Y_i(1) - Y_i(0) - \hat{\mathcal{l}}(X_i, D = 0)} \cdot
+  \Bigbr{\frac{D - \hat{e}(X_i)}{P(D = 1) (1- \hat{e}(X_i) )}}
 \]</span></p>
-<p>where <span class="math inline">\(\hat{e}(\cdot)\)</span> is the
-propensity score and <span class="math inline">\(\hat{\mathcal{l}}(\cdot)\)</span> is an outcome
-model for <span class="math inline">\(Y(1) - Y(0)\)</span> regressed on
-covariates in the untreated subsample. Both these functions are
-estimated using LASSO(<code>glmnet</code>) using internal
-cross-fitting.</p>
+<p>where <span class="math inline">\(\hat{e}(\cdot)\)</span> is the propensity score and <span class="math inline">\(\hat{\mathcal{l}}(\cdot)\)</span> is an outcome model for <span class="math inline">\(Y(1) - Y(0)\)</span> regressed on covariates in the untreated subsample <span class="math inline">\(D = 0\)</span>. The latter contains the additional ‘debiasing’ term <span class="math inline">\(\hat{\mathcal{l}}(\cdot)\)</span>, which subtracts out the projected change in the outcome in the untreated group (i.e. it can be thought of as the 2nd difference in the conventional DiD estimator).</p>
+<p>This is implemented in <code>aipwDID</code>.</p>
+<p>Both these functions are estimated using LASSO(<code>glmnet</code>) using internal cross-fitting.</p>
 <div class="section level2">
 <h2 id="dgp">DGP<a class="anchor" aria-label="anchor" href="#dgp"></a>
 </h2>
+<p><span class="math inline">\(N=200\)</span> is the and <span class="math inline">\(p=100\)</span> is the dimension of control variables, <span class="math inline">\(X_{i} \sim N\left(0, I_{p \times p}\right)\)</span>.</p>
+<p>Let <span class="math inline">\(\gamma_{0}=(1,1 / 2,1 / 3,1 / 4\)</span>, <span class="math inline">\(1 / 5,0, \ldots, 0) \in \mathbb{R}^{p}\)</span>, and <span class="math inline">\(D_{i}\)</span> is generated by the propensity score <span class="math inline">\(e := P(D=1 \mid X)=\frac{1}{1+\exp \left(-X^{\prime} \gamma_{0}\right)}\)</span>. The pscore is sparse.</p>
+<p>Also, let the potential outcomes be <span class="math inline">\(Y_{i}^{0}(0)=X_{i}^{\prime} \beta_{0}+\varepsilon_{1}, Y_{i}^{0}(1)=Y_{i}^{0}(0)+1+ \rho e + \varepsilon_{2}\)</span>, and <span class="math inline">\(Y_{i}^{1}(1)=\)</span> <span class="math inline">\(\theta_{0}+Y_{i}^{0}(1)+\varepsilon_{3}\)</span>, where <span class="math inline">\(\beta_{0}=\gamma_{0}+0.5\)</span> and <span class="math inline">\(\theta_{0}=3\)</span>, and all error terms follow <span class="math inline">\(N(0,0.1)\)</span>. Since <span class="math inline">\(e\)</span> enters into the process for the untreated potential outcome in the 2nd period <span class="math inline">\(Y_{i}^{0}(1)\)</span>, the parallel trends assumption is violated whenever <span class="math inline">\(\rho \neq 0\)</span>.</p>
+<p>Researchers observe <span class="math inline">\(\left\{Y_{i}(0), Y_{i}(1), D_{i}, X_{i}\right\}\)</span> for <span class="math inline">\(i=1, \ldots, N\)</span>, where <span class="math inline">\(Y_{i}(0)=Y_{i}^{0}(0)\)</span> and <span class="math inline">\(Y_{i}(1)=\)</span> <span class="math inline">\(Y_{i}^{0}(1)\left(1-D_{i}\right)+Y_{i}^{1}\)</span> (1) <span class="math inline">\(D_{i}\)</span>.</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/rm.html" class="external-link">rm</a></span><span class="op">(</span>list <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/ls.html" class="external-link">ls</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va">LalRUtils</span><span class="op">)</span></span></code></pre></div>
-<pre><code><span><span class="co">## Loading required package: data.table</span></span></code></pre>
-<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/pkg/LalRUtils/man/libreq.html" class="external-link">libreq</a></span><span class="op">(</span><span class="va">data.table</span>, <span class="va">ggplot2</span><span class="op">)</span></span></code></pre></div>
-<pre><code><span><span class="co">##      wants        loaded</span></span>
-<span><span class="co">## [1,] "data.table" TRUE  </span></span>
-<span><span class="co">## [2,] "ggplot2"    TRUE</span></span></code></pre>
-<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/options.html" class="external-link">options</a></span><span class="op">(</span>repr.plot.width<span class="op">=</span><span class="fl">12</span>, repr.plot.height<span class="op">=</span><span class="fl">9</span><span class="op">)</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">42</span><span class="op">)</span></span>
-<span><span class="co"># %% ####################################################</span></span>
-<span></span>
-<span><span class="fu">knitr</span><span class="fu">::</span><span class="va"><a href="https://rdrr.io/pkg/knitr/man/opts_chunk.html" class="external-link">opts_chunk</a></span><span class="op">$</span><span class="fu">set</span><span class="op">(</span></span>
-<span>  echo <span class="op">=</span>    <span class="cn">T</span>,          <span class="co"># don't show code</span></span>
-<span>  include <span class="op">=</span> <span class="cn">T</span>,          <span class="co"># show output</span></span>
-<span>  warning <span class="op">=</span> <span class="cn">F</span>,       <span class="co"># don't show warnings</span></span>
-<span>  message <span class="op">=</span> <span class="cn">F</span>,       <span class="co"># don't show messages (less serious warnings)</span></span>
-<span>  cache   <span class="op">=</span> <span class="cn">T</span>,       <span class="co"># F unless runtime is very long</span></span>
-<span>  <span class="co"># root.dir = 'location_of_dependencies'</span></span>
-<span>  fig.align <span class="op">=</span> <span class="st">"center"</span></span>
-<span><span class="op">)</span></span>
-<span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va">sp2DID</span><span class="op">)</span></span></code></pre></div>
-<pre><code><span><span class="co">## Loading required package: glmnet</span></span></code></pre>
-<pre><code><span><span class="co">## Loading required package: Matrix</span></span></code></pre>
-<pre><code><span><span class="co">## Loaded glmnet 4.1-4</span></span></code></pre>
-<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># %% # DGP</span></span>
-<span><span class="va">simstudy</span> <span class="op">=</span> \<span class="op">(</span><span class="va">N</span><span class="op">=</span><span class="fl">200</span>, <span class="va">p</span><span class="op">=</span><span class="fl">100</span>, <span class="va">s</span><span class="op">=</span><span class="fl">5</span>, <span class="va">theta</span><span class="op">=</span><span class="fl">3</span>,</span>
-<span>      <span class="va">ρ</span> <span class="op">=</span> <span class="fl">0</span> <span class="co"># no parallel trends violation by default</span></span>
-<span>    <span class="op">)</span><span class="op">{</span></span>
-<span>    <span class="co"># sparse signal in pscore</span></span>
-<span>    <span class="va">γ</span><span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="va">s</span><span class="op">:</span><span class="fl">1</span>, <span class="fu"><a href="https://rdrr.io/r/base/rep.html" class="external-link">rep</a></span><span class="op">(</span><span class="fl">0</span>, <span class="op">(</span><span class="va">p</span><span class="op">-</span><span class="va">s</span><span class="op">)</span><span class="op">)</span><span class="op">)</span><span class="op">/</span><span class="va">s</span></span>
-<span>    <span class="va">X</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/array.html" class="external-link">array</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/Normal.html" class="external-link">rnorm</a></span><span class="op">(</span><span class="va">N</span><span class="op">*</span><span class="va">p</span><span class="op">)</span>, dim<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="va">N</span>,<span class="va">p</span><span class="op">)</span><span class="op">)</span></span>
-<span>    <span class="va">e</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/pkg/LalRUtils/man/expit.html" class="external-link">expit</a></span><span class="op">(</span><span class="va">X</span> <span class="op"><a href="https://rdrr.io/r/base/matmult.html" class="external-link">%*%</a></span> <span class="va">γ</span><span class="op">)</span></span>
-<span>    <span class="va">D</span>  <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/Binomial.html" class="external-link">rbinom</a></span><span class="op">(</span><span class="va">N</span>,<span class="fl">1</span>,<span class="va">e</span><span class="op">)</span></span>
-<span>    <span class="va">beta1</span> <span class="op">=</span> <span class="va">γ</span> <span class="op">+</span> <span class="fl">0.5</span></span>
-<span>    <span class="va">ε1</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html" class="external-link">rnorm</a></span><span class="op">(</span><span class="va">N</span>,<span class="fl">0</span>,<span class="fl">0.1</span><span class="op">)</span>; <span class="va">ε2</span> <span class="op">=</span> <span class="va">ε3</span> <span class="op">=</span> <span class="va">ε1</span></span>
-<span>    <span class="co"># potential outcomes</span></span>
-<span>    <span class="va">Y11</span><span class="op">=</span><span class="va">Y01</span><span class="op">=</span><span class="va">Y00</span><span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/rep.html" class="external-link">rep</a></span><span class="op">(</span><span class="cn">NA</span>, <span class="va">N</span><span class="op">)</span></span>
-<span>    <span class="va">Y00</span> <span class="op">=</span> <span class="va">X</span> <span class="op"><a href="https://rdrr.io/r/base/matmult.html" class="external-link">%*%</a></span> <span class="va">beta1</span> <span class="op">+</span> <span class="va">ε1</span></span>
-<span>    <span class="va">Y01</span> <span class="op">=</span> <span class="va">Y00</span> <span class="op">+</span> <span class="fl">1</span> <span class="op">+</span> <span class="va">ρ</span> <span class="op">*</span> <span class="va">e</span> <span class="op">+</span> <span class="va">ε2</span>      <span class="co"># pscore enters outcome model</span></span>
-<span>    <span class="va">Y11</span> <span class="op">=</span> <span class="va">theta</span> <span class="op">+</span> <span class="va">Y01</span> <span class="op">+</span><span class="va">ε3</span></span>
-<span>    <span class="co"># outcomes at two time periods</span></span>
-<span>    <span class="va">Y0</span> <span class="op">=</span> <span class="va">Y00</span></span>
-<span>    <span class="va">Y1</span> <span class="op">=</span> <span class="va">Y01</span><span class="op">*</span><span class="op">(</span><span class="fl">1</span><span class="op">-</span><span class="va">D</span><span class="op">)</span> <span class="op">+</span> <span class="va">Y11</span><span class="op">*</span><span class="va">D</span></span>
-<span>    <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span><span class="va">Y1</span>, <span class="va">Y0</span>, <span class="va">D</span>, <span class="va">X</span><span class="op">)</span></span>
+<span><span class="va">simdgp</span> <span class="op">=</span> \<span class="op">(</span><span class="va">N</span> <span class="op">=</span> <span class="fl">200</span>,</span>
+<span>  <span class="va">p</span> <span class="op">=</span> <span class="fl">100</span>, <span class="va">s</span> <span class="op">=</span> <span class="fl">5</span>, <span class="co"># covariate dimension and signal strength</span></span>
+<span>  <span class="va">theta</span> <span class="op">=</span> <span class="fl">3</span>, <span class="co"># true effect</span></span>
+<span>  <span class="va">ρ</span> <span class="op">=</span> <span class="fl">0</span> <span class="co"># no parallel trends violation by default</span></span>
+<span><span class="op">)</span><span class="op">{</span></span>
+<span>  <span class="co"># sparse signal in pscore</span></span>
+<span>  <span class="va">γ</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="va">s</span><span class="op">:</span><span class="fl">1</span>, <span class="fu"><a href="https://rdrr.io/r/base/rep.html" class="external-link">rep</a></span><span class="op">(</span><span class="fl">0</span>, <span class="op">(</span><span class="va">p</span> <span class="op">-</span> <span class="va">s</span><span class="op">)</span><span class="op">)</span><span class="op">)</span> <span class="op">/</span> <span class="va">s</span></span>
+<span>  <span class="va">X</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/array.html" class="external-link">array</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/Normal.html" class="external-link">rnorm</a></span><span class="op">(</span><span class="va">N</span> <span class="op">*</span> <span class="va">p</span><span class="op">)</span>, dim <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="va">N</span>, <span class="va">p</span><span class="op">)</span><span class="op">)</span></span>
+<span>  <span class="va">e</span> <span class="op">=</span> <span class="fu">expit</span><span class="op">(</span><span class="va">X</span> <span class="op"><a href="https://rdrr.io/r/base/matmult.html" class="external-link">%*%</a></span> <span class="va">γ</span><span class="op">)</span></span>
+<span>  <span class="va">D</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/Binomial.html" class="external-link">rbinom</a></span><span class="op">(</span><span class="va">N</span>, <span class="fl">1</span>, <span class="va">e</span><span class="op">)</span></span>
+<span>  <span class="va">beta1</span> <span class="op">=</span> <span class="va">γ</span> <span class="op">+</span> <span class="fl">0.5</span></span>
+<span>  <span class="va">ε1</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html" class="external-link">rnorm</a></span><span class="op">(</span><span class="va">N</span>, <span class="fl">0</span>, <span class="fl">0.1</span><span class="op">)</span>; <span class="va">ε2</span> <span class="op">=</span> <span class="va">ε3</span> <span class="op">=</span> <span class="va">ε1</span></span>
+<span>  <span class="co"># potential outcomes</span></span>
+<span>  <span class="va">Y10</span> <span class="op">=</span> <span class="va">Y11</span> <span class="op">=</span> <span class="va">Y01</span> <span class="op">=</span> <span class="va">Y00</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/rep.html" class="external-link">rep</a></span><span class="op">(</span><span class="cn">NA</span>, <span class="va">N</span><span class="op">)</span></span>
+<span>  <span class="va">Y00</span> <span class="op">=</span> <span class="va">X</span> <span class="op"><a href="https://rdrr.io/r/base/matmult.html" class="external-link">%*%</a></span> <span class="va">beta1</span> <span class="op">+</span> <span class="va">ε1</span></span>
+<span>  <span class="va">Y10</span> <span class="op">=</span> <span class="va">Y01</span> <span class="op">=</span> <span class="va">Y00</span> <span class="op">+</span> <span class="fl">1</span> <span class="op">+</span> <span class="va">ρ</span> <span class="op">*</span> <span class="va">e</span> <span class="op">+</span> <span class="va">ε2</span> <span class="co"># pscore enters outcome model</span></span>
+<span>  <span class="va">Y11</span> <span class="op">=</span> <span class="va">theta</span> <span class="op">+</span> <span class="va">Y01</span> <span class="op">+</span> <span class="va">ε3</span></span>
+<span>  <span class="co"># outcomes at two time periods</span></span>
+<span>  <span class="va">Y0</span> <span class="op">=</span> <span class="va">Y00</span></span>
+<span>  <span class="va">Y1</span> <span class="op">=</span> <span class="va">Y01</span> <span class="op">*</span> <span class="op">(</span><span class="fl">1</span> <span class="op">-</span> <span class="va">D</span><span class="op">)</span> <span class="op">+</span> <span class="va">Y11</span> <span class="op">*</span> <span class="va">D</span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span><span class="va">Y1</span>, <span class="va">Y0</span>, <span class="va">D</span>, <span class="va">X</span><span class="op">)</span></span>
+<span><span class="op">}</span></span>
+<span></span>
+<span><span class="va">estDIDs</span> <span class="op">=</span> \<span class="op">(</span><span class="va">...</span><span class="op">)</span><span class="op">{</span></span>
+<span>  <span class="va">df</span> <span class="op">=</span> <span class="fu">simdgp</span><span class="op">(</span><span class="va">...</span><span class="op">)</span></span>
+<span>  <span class="va">res</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span></span>
+<span>    <span class="co"># naive difference in post</span></span>
+<span>    naive <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/with.html" class="external-link">with</a></span><span class="op">(</span><span class="va">df</span>, <span class="fu"><a href="https://rdrr.io/r/base/mean.html" class="external-link">mean</a></span><span class="op">(</span><span class="va">Y1</span><span class="op">[</span><span class="va">D</span> <span class="op">==</span> <span class="fl">1</span><span class="op">]</span><span class="op">)</span> <span class="op">-</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html" class="external-link">mean</a></span><span class="op">(</span><span class="va">Y1</span><span class="op">[</span><span class="va">D</span> <span class="op">==</span> <span class="fl">0</span><span class="op">]</span><span class="op">)</span><span class="op">)</span>,</span>
+<span>    <span class="co"># diff in diff</span></span>
+<span>    did <span class="op">=</span> <span class="fu"><a href="../reference/DID.html">DID</a></span><span class="op">(</span><span class="va">df</span><span class="op">$</span><span class="va">D</span>, <span class="va">df</span><span class="op">$</span><span class="va">Y1</span>, <span class="va">df</span><span class="op">$</span><span class="va">Y0</span><span class="op">)</span>,</span>
+<span>    <span class="co"># outcome modeling</span></span>
+<span>    om <span class="op">=</span> <span class="fu"><a href="../reference/omDID.html">omDID</a></span><span class="op">(</span><span class="va">df</span><span class="op">[</span>, <span class="op">-</span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">3</span><span class="op">)</span><span class="op">]</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://rdrr.io/r/base/matrix.html" class="external-link">as.matrix</a></span><span class="op">(</span><span class="op">)</span>, <span class="va">df</span><span class="op">$</span><span class="va">D</span>, <span class="va">df</span><span class="op">$</span><span class="va">Y1</span>, <span class="va">df</span><span class="op">$</span><span class="va">Y0</span>, xfit <span class="op">=</span> <span class="cn">F</span><span class="op">)</span>,</span>
+<span>    <span class="co"># outcome modeling XF</span></span>
+<span>    omXF <span class="op">=</span> <span class="fu"><a href="../reference/omDID.html">omDID</a></span><span class="op">(</span><span class="va">df</span><span class="op">[</span>, <span class="op">-</span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">3</span><span class="op">)</span><span class="op">]</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://rdrr.io/r/base/matrix.html" class="external-link">as.matrix</a></span><span class="op">(</span><span class="op">)</span>, <span class="va">df</span><span class="op">$</span><span class="va">D</span>, <span class="va">df</span><span class="op">$</span><span class="va">Y1</span>, <span class="va">df</span><span class="op">$</span><span class="va">Y0</span>, xfit <span class="op">=</span> <span class="cn">T</span><span class="op">)</span>,</span>
+<span>    <span class="co"># IPW</span></span>
+<span>    ipw <span class="op">=</span> <span class="fu"><a href="../reference/ipwDID.html">ipwDID</a></span><span class="op">(</span><span class="va">df</span><span class="op">[</span>, <span class="op">-</span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">3</span><span class="op">)</span><span class="op">]</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://rdrr.io/r/base/matrix.html" class="external-link">as.matrix</a></span><span class="op">(</span><span class="op">)</span>, <span class="va">df</span><span class="op">$</span><span class="va">D</span>, <span class="va">df</span><span class="op">$</span><span class="va">Y1</span>, <span class="va">df</span><span class="op">$</span><span class="va">Y0</span>, xfit <span class="op">=</span> <span class="cn">F</span><span class="op">)</span>,</span>
+<span>    <span class="co"># IPW XF</span></span>
+<span>    ipwXF <span class="op">=</span> <span class="fu"><a href="../reference/ipwDID.html">ipwDID</a></span><span class="op">(</span><span class="va">df</span><span class="op">[</span>, <span class="op">-</span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">3</span><span class="op">)</span><span class="op">]</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://rdrr.io/r/base/matrix.html" class="external-link">as.matrix</a></span><span class="op">(</span><span class="op">)</span>, <span class="va">df</span><span class="op">$</span><span class="va">D</span>, <span class="va">df</span><span class="op">$</span><span class="va">Y1</span>, <span class="va">df</span><span class="op">$</span><span class="va">Y0</span>, xfit <span class="op">=</span> <span class="cn">T</span><span class="op">)</span>,</span>
+<span>    <span class="co"># aIPW</span></span>
+<span>    aipw <span class="op">=</span> <span class="fu"><a href="../reference/aipwDID.html">aipwDID</a></span><span class="op">(</span><span class="va">df</span><span class="op">[</span>, <span class="op">-</span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">3</span><span class="op">)</span><span class="op">]</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://rdrr.io/r/base/matrix.html" class="external-link">as.matrix</a></span><span class="op">(</span><span class="op">)</span>, <span class="va">df</span><span class="op">$</span><span class="va">D</span>, <span class="va">df</span><span class="op">$</span><span class="va">Y1</span>, <span class="va">df</span><span class="op">$</span><span class="va">Y0</span>, xfit <span class="op">=</span> <span class="cn">F</span><span class="op">)</span>,</span>
+<span>    <span class="co"># aIPW</span></span>
+<span>    aipwXF <span class="op">=</span> <span class="fu"><a href="../reference/aipwDID.html">aipwDID</a></span><span class="op">(</span><span class="va">df</span><span class="op">[</span>, <span class="op">-</span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">3</span><span class="op">)</span><span class="op">]</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://rdrr.io/r/base/matrix.html" class="external-link">as.matrix</a></span><span class="op">(</span><span class="op">)</span>, <span class="va">df</span><span class="op">$</span><span class="va">D</span>, <span class="va">df</span><span class="op">$</span><span class="va">Y1</span>, <span class="va">df</span><span class="op">$</span><span class="va">Y0</span>, xfit <span class="op">=</span> <span class="cn">T</span><span class="op">)</span></span>
+<span>  <span class="op">)</span></span>
+<span>  <span class="kw"><a href="https://rdrr.io/r/base/function.html" class="external-link">return</a></span><span class="op">(</span><span class="va">res</span><span class="op">)</span></span>
+<span><span class="op">}</span></span>
+<span><span class="co"># trial run</span></span>
+<span><span class="fu">estDIDs</span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
+<pre><code><span><span class="co">##    naive      did       om     omXF      ipw    ipwXF     aipw   aipwXF </span></span>
+<span><span class="co">## 5.931734 3.000713 3.008693 2.717237 3.160076 3.031915 2.982465 2.981989</span></span></code></pre>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># sampling distribution plotter</span></span>
+<span><span class="va">distPlot</span> <span class="op">=</span> \<span class="op">(</span><span class="va">x</span>, <span class="va">t</span>, <span class="va">lb</span> <span class="op">=</span> <span class="fl">2.5</span>, <span class="va">ub</span> <span class="op">=</span> <span class="fl">3.5</span>, <span class="va">trueval</span> <span class="op">=</span> <span class="fl">3</span><span class="op">)</span><span class="op">{</span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/graphics/hist.html" class="external-link">hist</a></span><span class="op">(</span><span class="va">x</span>, breaks <span class="op">=</span> <span class="fl">100</span>, main <span class="op">=</span> <span class="va">t</span>, xlab <span class="op">=</span> <span class="st">""</span>, ylab <span class="op">=</span> <span class="st">""</span>, yaxt <span class="op">=</span> <span class="st">"n"</span>, xlim <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="va">lb</span>, <span class="va">ub</span><span class="op">)</span><span class="op">)</span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/graphics/abline.html" class="external-link">abline</a></span><span class="op">(</span>v <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html" class="external-link">mean</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span>, col <span class="op">=</span> <span class="st">'blue'</span><span class="op">)</span>; <span class="fu"><a href="https://rdrr.io/r/graphics/abline.html" class="external-link">abline</a></span><span class="op">(</span>v <span class="op">=</span> <span class="va">trueval</span>, col <span class="op">=</span> <span class="st">'red'</span><span class="op">)</span></span>
 <span><span class="op">}</span></span></code></pre></div>
 </div>
 <div class="section level2">
-<h2 id="pt">PT<a class="anchor" aria-label="anchor" href="#pt"></a>
+<h2 id="unconditional-parallel-trends-rho-0">unconditional parallel trends (<span class="math inline">\(\rho = 0\)</span>)<a class="anchor" aria-label="anchor" href="#unconditional-parallel-trends-rho-0"></a>
 </h2>
-<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">θ</span> <span class="op">=</span> <span class="fl">3</span></span>
-<span><span class="va">B</span> <span class="op">=</span> <span class="fl">100</span></span>
-<span></span>
-<span><span class="va">oneRep</span> <span class="op">=</span> \<span class="op">(</span><span class="op">)</span><span class="op">{</span></span>
-<span>    <span class="va">df</span> <span class="op">=</span> <span class="fu">simstudy</span><span class="op">(</span><span class="op">)</span></span>
-<span>    <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span></span>
-<span>        <span class="co"># naive</span></span>
-<span>        <span class="fu"><a href="https://rdrr.io/r/base/with.html" class="external-link">with</a></span><span class="op">(</span><span class="va">df</span>, <span class="fu"><a href="https://rdrr.io/r/base/mean.html" class="external-link">mean</a></span><span class="op">(</span><span class="va">Y1</span><span class="op">[</span><span class="va">D</span><span class="op">==</span><span class="fl">1</span><span class="op">]</span><span class="op">)</span> <span class="op">-</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html" class="external-link">mean</a></span><span class="op">(</span><span class="va">Y1</span><span class="op">[</span><span class="va">D</span><span class="op">==</span><span class="fl">0</span><span class="op">]</span><span class="op">)</span> <span class="op">)</span>,</span>
-<span>        <span class="co"># om</span></span>
-<span>        <span class="fu"><a href="https://rdrr.io/r/base/with.html" class="external-link">with</a></span><span class="op">(</span><span class="va">df</span>, <span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/mean.html" class="external-link">mean</a></span><span class="op">(</span><span class="va">Y1</span><span class="op">[</span><span class="va">D</span><span class="op">==</span><span class="fl">1</span><span class="op">]</span><span class="op">)</span> <span class="op">-</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html" class="external-link">mean</a></span><span class="op">(</span><span class="va">Y0</span><span class="op">[</span><span class="va">D</span><span class="op">==</span><span class="fl">1</span><span class="op">]</span><span class="op">)</span><span class="op">)</span> <span class="op">-</span></span>
-<span>                 <span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/mean.html" class="external-link">mean</a></span><span class="op">(</span><span class="va">Y1</span><span class="op">[</span><span class="va">D</span><span class="op">==</span><span class="fl">0</span><span class="op">]</span><span class="op">)</span> <span class="op">-</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html" class="external-link">mean</a></span><span class="op">(</span><span class="va">Y0</span><span class="op">[</span><span class="va">D</span><span class="op">==</span><span class="fl">0</span><span class="op">]</span><span class="op">)</span><span class="op">)</span> <span class="op">)</span>,</span>
-<span>        <span class="co"># ipw</span></span>
-<span>        <span class="fu"><a href="../reference/ipwDID.html">ipwDID</a></span><span class="op">(</span><span class="va">df</span><span class="op">[</span>, <span class="op">-</span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">3</span><span class="op">)</span><span class="op">]</span> <span class="op">%&gt;%</span> <span class="fu"><a href="https://rdrr.io/r/base/matrix.html" class="external-link">as.matrix</a></span><span class="op">(</span><span class="op">)</span>, <span class="va">df</span><span class="op">$</span><span class="va">D</span>, <span class="va">df</span><span class="op">$</span><span class="va">Y1</span>, <span class="va">df</span><span class="op">$</span><span class="va">Y0</span>, xfit <span class="op">=</span> <span class="cn">F</span><span class="op">)</span>,</span>
-<span>        <span class="fu"><a href="../reference/ipwDID.html">ipwDID</a></span><span class="op">(</span><span class="va">df</span><span class="op">[</span>, <span class="op">-</span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">3</span><span class="op">)</span><span class="op">]</span> <span class="op">%&gt;%</span> <span class="fu"><a href="https://rdrr.io/r/base/matrix.html" class="external-link">as.matrix</a></span><span class="op">(</span><span class="op">)</span>, <span class="va">df</span><span class="op">$</span><span class="va">D</span>, <span class="va">df</span><span class="op">$</span><span class="va">Y1</span>, <span class="va">df</span><span class="op">$</span><span class="va">Y0</span>, xfit <span class="op">=</span> <span class="cn">T</span><span class="op">)</span>,</span>
-<span>        <span class="co"># aipw</span></span>
-<span>        <span class="fu"><a href="../reference/aipwDID.html">aipwDID</a></span><span class="op">(</span><span class="va">df</span><span class="op">[</span>, <span class="op">-</span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">3</span><span class="op">)</span><span class="op">]</span> <span class="op">%&gt;%</span> <span class="fu"><a href="https://rdrr.io/r/base/matrix.html" class="external-link">as.matrix</a></span><span class="op">(</span><span class="op">)</span>, <span class="va">df</span><span class="op">$</span><span class="va">D</span>, <span class="va">df</span><span class="op">$</span><span class="va">Y1</span>, <span class="va">df</span><span class="op">$</span><span class="va">Y0</span>, xfit <span class="op">=</span> <span class="cn">F</span><span class="op">)</span>,</span>
-<span>        <span class="fu"><a href="../reference/aipwDID.html">aipwDID</a></span><span class="op">(</span><span class="va">df</span><span class="op">[</span>, <span class="op">-</span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">3</span><span class="op">)</span><span class="op">]</span> <span class="op">%&gt;%</span> <span class="fu"><a href="https://rdrr.io/r/base/matrix.html" class="external-link">as.matrix</a></span><span class="op">(</span><span class="op">)</span>, <span class="va">df</span><span class="op">$</span><span class="va">D</span>, <span class="va">df</span><span class="op">$</span><span class="va">Y1</span>, <span class="va">df</span><span class="op">$</span><span class="va">Y0</span>, xfit <span class="op">=</span> <span class="cn">T</span><span class="op">)</span></span>
-<span>    <span class="op">)</span></span>
-<span><span class="op">}</span></span>
-<span></span>
-<span><span class="va">tauhats</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/pkg/LalRUtils/man/mcReplicate.html" class="external-link">mcReplicate</a></span><span class="op">(</span><span class="va">B</span>, <span class="fu">oneRep</span><span class="op">(</span><span class="op">)</span>, mc.cores <span class="op">=</span> <span class="fl">6</span><span class="op">)</span></span></code></pre></div>
+<p>Difference in differences is clearly unbiased and has low MSE, as does AIPW. IPW has small bias when fit using sample splitting, but large bias otherwise.</p>
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">B</span> <span class="op">=</span> <span class="fl">1000</span></span>
+<span><span class="fu">tic</span><span class="op">(</span><span class="op">)</span></span>
+<span><span class="va">ests</span> <span class="op">=</span> <span class="fu">mcReplicate</span><span class="op">(</span><span class="va">B</span>, <span class="fu">estDIDs</span><span class="op">(</span><span class="op">)</span>, mc.cores <span class="op">=</span> <span class="fl">15</span><span class="op">)</span></span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu">toc</span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
+<pre><code><span><span class="co">## 412.148 sec elapsed</span></span></code></pre>
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/graphics/par.html" class="external-link">par</a></span><span class="op">(</span>mfrow <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">4</span>, <span class="fl">2</span><span class="op">)</span>, mar <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">5</span>, <span class="fl">0</span>, <span class="fl">4</span>, <span class="fl">0</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="fu">distPlot</span><span class="op">(</span><span class="va">ests</span><span class="op">[</span><span class="fl">1</span>, <span class="op">]</span>, <span class="st">"naive"</span><span class="op">)</span></span>
+<span><span class="fu">distPlot</span><span class="op">(</span><span class="va">ests</span><span class="op">[</span><span class="fl">2</span>, <span class="op">]</span>, <span class="st">"did"</span><span class="op">)</span></span>
+<span><span class="fu">distPlot</span><span class="op">(</span><span class="va">ests</span><span class="op">[</span><span class="fl">3</span>, <span class="op">]</span>, <span class="st">"om"</span><span class="op">)</span></span>
+<span><span class="fu">distPlot</span><span class="op">(</span><span class="va">ests</span><span class="op">[</span><span class="fl">4</span>, <span class="op">]</span>, <span class="st">"omXF"</span><span class="op">)</span></span>
+<span><span class="fu">distPlot</span><span class="op">(</span><span class="va">ests</span><span class="op">[</span><span class="fl">5</span>, <span class="op">]</span>, <span class="st">"ipw"</span><span class="op">)</span></span>
+<span><span class="fu">distPlot</span><span class="op">(</span><span class="va">ests</span><span class="op">[</span><span class="fl">6</span>, <span class="op">]</span>, <span class="st">"ipwXF"</span><span class="op">)</span></span>
+<span><span class="fu">distPlot</span><span class="op">(</span><span class="va">ests</span><span class="op">[</span><span class="fl">7</span>, <span class="op">]</span>, <span class="st">"aipw"</span><span class="op">)</span></span>
+<span><span class="fu">distPlot</span><span class="op">(</span><span class="va">ests</span><span class="op">[</span><span class="fl">8</span>, <span class="op">]</span>, <span class="st">"aipwXF"</span><span class="op">)</span></span></code></pre></div>
+<p><img src="basics_files/figure-html/unnamed-chunk-4-1.png" width="1152"></p>
+</div>
+<div class="section level2">
+<h2 id="conditional-parallel-trends-rho-2">conditional parallel trends (<span class="math inline">\(\rho = 2\)</span>)<a class="anchor" aria-label="anchor" href="#conditional-parallel-trends-rho-2"></a>
+</h2>
+<p>Now, Difference in differences is clearly biased. IPW has smaller bias when fit using sample splitting, but is still quite biased. AIPW is still unbiased and has low MSE.</p>
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">B</span> <span class="op">=</span> <span class="fl">1000</span></span>
+<span><span class="fu">tic</span><span class="op">(</span><span class="op">)</span></span>
+<span><span class="va">ests2</span> <span class="op">=</span> <span class="fu">mcReplicate</span><span class="op">(</span><span class="va">B</span>, <span class="fu">estDIDs</span><span class="op">(</span>ρ <span class="op">=</span> <span class="fl">2</span><span class="op">)</span>, mc.cores <span class="op">=</span> <span class="fl">15</span><span class="op">)</span></span></code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu">toc</span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
+<pre><code><span><span class="co">## 394.389 sec elapsed</span></span></code></pre>
 <div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">ests</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="va">tauhats</span><span class="op">)</span></span>
-<span><span class="va">bounds</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/quantile.html" class="external-link">quantile</a></span><span class="op">(</span><span class="va">ests</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0.05</span>, <span class="fl">0.95</span><span class="op">)</span><span class="op">)</span></span>
-<span><span class="va">lb</span> <span class="op">=</span> <span class="fl">2.5</span>; <span class="va">ub</span> <span class="op">=</span> <span class="fl">3.5</span></span>
-<span></span>
-<span><span class="va">tauhats</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/t.html" class="external-link">t</a></span><span class="op">(</span><span class="va">tauhats</span><span class="op">)</span></span>
-<span></span>
-<span><span class="va">figm</span> <span class="op">=</span> \<span class="op">(</span><span class="va">x</span>, <span class="va">t</span><span class="op">)</span><span class="op">{</span></span>
-<span>    <span class="fu"><a href="https://rdrr.io/r/graphics/hist.html" class="external-link">hist</a></span><span class="op">(</span><span class="va">x</span>, breaks<span class="op">=</span><span class="fl">100</span>, main<span class="op">=</span><span class="va">t</span>, xlab<span class="op">=</span><span class="st">""</span>, ylab<span class="op">=</span><span class="st">""</span>, xlim <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="va">lb</span>, <span class="va">ub</span><span class="op">)</span><span class="op">)</span></span>
-<span>    <span class="fu"><a href="https://rdrr.io/r/graphics/abline.html" class="external-link">abline</a></span><span class="op">(</span>v <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html" class="external-link">mean</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span>, col <span class="op">=</span> <span class="st">'blue'</span><span class="op">)</span>; <span class="fu"><a href="https://rdrr.io/r/graphics/abline.html" class="external-link">abline</a></span><span class="op">(</span>v <span class="op">=</span> <span class="va">θ</span>, col <span class="op">=</span> <span class="st">'red'</span><span class="op">)</span></span>
-<span><span class="op">}</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/graphics/par.html" class="external-link">par</a></span><span class="op">(</span>mfrow <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">3</span>, <span class="fl">2</span><span class="op">)</span><span class="op">)</span></span>
-<span><span class="fu">figm</span><span class="op">(</span><span class="va">tauhats</span><span class="op">[</span>,<span class="fl">1</span><span class="op">]</span>,<span class="st">"Naive Post"</span><span class="op">)</span></span>
-<span><span class="fu">figm</span><span class="op">(</span><span class="va">tauhats</span><span class="op">[</span>,<span class="fl">2</span><span class="op">]</span>,<span class="st">"DiD"</span><span class="op">)</span></span>
-<span><span class="fu">figm</span><span class="op">(</span><span class="va">tauhats</span><span class="op">[</span>,<span class="fl">3</span><span class="op">]</span>,<span class="st">"IPW FS"</span><span class="op">)</span></span>
-<span><span class="fu">figm</span><span class="op">(</span><span class="va">tauhats</span><span class="op">[</span>,<span class="fl">4</span><span class="op">]</span>,<span class="st">"IPW XF"</span><span class="op">)</span></span>
-<span><span class="fu">figm</span><span class="op">(</span><span class="va">tauhats</span><span class="op">[</span>,<span class="fl">5</span><span class="op">]</span>,<span class="st">"AIPW FS"</span><span class="op">)</span></span>
-<span><span class="fu">figm</span><span class="op">(</span><span class="va">tauhats</span><span class="op">[</span>,<span class="fl">6</span><span class="op">]</span>,<span class="st">"AIPW XF"</span><span class="op">)</span></span></code></pre></div>
-<p><img src="basics_files/figure-html/unnamed-chunk-2-1.png" width="700" style="display: block; margin: auto;"></p>
-<div class="section level3">
-<h3 id="pt-violation">PT Violation<a class="anchor" aria-label="anchor" href="#pt-violation"></a>
-</h3>
-<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">B</span> <span class="op">=</span> <span class="fl">10</span></span>
-<span></span>
-<span><span class="va">oneRep</span> <span class="op">=</span> \<span class="op">(</span><span class="op">)</span><span class="op">{</span></span>
-<span>    <span class="va">df</span> <span class="op">=</span> <span class="fu">simstudy</span><span class="op">(</span>ρ<span class="op">=</span><span class="fl">1.5</span><span class="op">)</span></span>
-<span>    <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span></span>
-<span>        <span class="co"># naive</span></span>
-<span>        <span class="fu"><a href="https://rdrr.io/r/base/with.html" class="external-link">with</a></span><span class="op">(</span><span class="va">df</span>, <span class="fu"><a href="https://rdrr.io/r/base/mean.html" class="external-link">mean</a></span><span class="op">(</span><span class="va">Y1</span><span class="op">[</span><span class="va">D</span><span class="op">==</span><span class="fl">1</span><span class="op">]</span><span class="op">)</span> <span class="op">-</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html" class="external-link">mean</a></span><span class="op">(</span><span class="va">Y1</span><span class="op">[</span><span class="va">D</span><span class="op">==</span><span class="fl">0</span><span class="op">]</span><span class="op">)</span> <span class="op">)</span>,</span>
-<span>        <span class="co"># om</span></span>
-<span>        <span class="fu"><a href="https://rdrr.io/r/base/with.html" class="external-link">with</a></span><span class="op">(</span><span class="va">df</span>, <span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/mean.html" class="external-link">mean</a></span><span class="op">(</span><span class="va">Y1</span><span class="op">[</span><span class="va">D</span><span class="op">==</span><span class="fl">1</span><span class="op">]</span><span class="op">)</span> <span class="op">-</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html" class="external-link">mean</a></span><span class="op">(</span><span class="va">Y0</span><span class="op">[</span><span class="va">D</span><span class="op">==</span><span class="fl">1</span><span class="op">]</span><span class="op">)</span><span class="op">)</span> <span class="op">-</span></span>
-<span>                 <span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/mean.html" class="external-link">mean</a></span><span class="op">(</span><span class="va">Y1</span><span class="op">[</span><span class="va">D</span><span class="op">==</span><span class="fl">0</span><span class="op">]</span><span class="op">)</span> <span class="op">-</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html" class="external-link">mean</a></span><span class="op">(</span><span class="va">Y0</span><span class="op">[</span><span class="va">D</span><span class="op">==</span><span class="fl">0</span><span class="op">]</span><span class="op">)</span><span class="op">)</span> <span class="op">)</span>,</span>
-<span>        <span class="co"># ipw</span></span>
-<span>        <span class="fu"><a href="../reference/ipwDID.html">ipwDID</a></span><span class="op">(</span><span class="va">df</span><span class="op">[</span>, <span class="op">-</span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">3</span><span class="op">)</span><span class="op">]</span> <span class="op">%&gt;%</span> <span class="fu"><a href="https://rdrr.io/r/base/matrix.html" class="external-link">as.matrix</a></span><span class="op">(</span><span class="op">)</span>, <span class="va">df</span><span class="op">$</span><span class="va">D</span>, <span class="va">df</span><span class="op">$</span><span class="va">Y1</span>, <span class="va">df</span><span class="op">$</span><span class="va">Y0</span>, xfit <span class="op">=</span> <span class="cn">F</span><span class="op">)</span>,</span>
-<span>        <span class="fu"><a href="../reference/ipwDID.html">ipwDID</a></span><span class="op">(</span><span class="va">df</span><span class="op">[</span>, <span class="op">-</span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">3</span><span class="op">)</span><span class="op">]</span> <span class="op">%&gt;%</span> <span class="fu"><a href="https://rdrr.io/r/base/matrix.html" class="external-link">as.matrix</a></span><span class="op">(</span><span class="op">)</span>, <span class="va">df</span><span class="op">$</span><span class="va">D</span>, <span class="va">df</span><span class="op">$</span><span class="va">Y1</span>, <span class="va">df</span><span class="op">$</span><span class="va">Y0</span>, xfit <span class="op">=</span> <span class="cn">T</span><span class="op">)</span>,</span>
-<span>        <span class="co"># aipw</span></span>
-<span>        <span class="fu"><a href="../reference/aipwDID.html">aipwDID</a></span><span class="op">(</span><span class="va">df</span><span class="op">[</span>, <span class="op">-</span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">3</span><span class="op">)</span><span class="op">]</span> <span class="op">%&gt;%</span> <span class="fu"><a href="https://rdrr.io/r/base/matrix.html" class="external-link">as.matrix</a></span><span class="op">(</span><span class="op">)</span>, <span class="va">df</span><span class="op">$</span><span class="va">D</span>, <span class="va">df</span><span class="op">$</span><span class="va">Y1</span>, <span class="va">df</span><span class="op">$</span><span class="va">Y0</span>, xfit <span class="op">=</span> <span class="cn">F</span><span class="op">)</span>,</span>
-<span>        <span class="fu"><a href="../reference/aipwDID.html">aipwDID</a></span><span class="op">(</span><span class="va">df</span><span class="op">[</span>, <span class="op">-</span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">3</span><span class="op">)</span><span class="op">]</span> <span class="op">%&gt;%</span> <span class="fu"><a href="https://rdrr.io/r/base/matrix.html" class="external-link">as.matrix</a></span><span class="op">(</span><span class="op">)</span>, <span class="va">df</span><span class="op">$</span><span class="va">D</span>, <span class="va">df</span><span class="op">$</span><span class="va">Y1</span>, <span class="va">df</span><span class="op">$</span><span class="va">Y0</span>, xfit <span class="op">=</span> <span class="cn">T</span><span class="op">)</span></span>
-<span>    <span class="op">)</span></span>
-<span><span class="op">}</span></span>
-<span></span>
-<span><span class="co"># oneRep()</span></span>
-<span></span>
-<span><span class="va">tauhats</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/pkg/LalRUtils/man/mcReplicate.html" class="external-link">mcReplicate</a></span><span class="op">(</span><span class="va">B</span>, <span class="fu">oneRep</span><span class="op">(</span><span class="op">)</span>, mc.cores <span class="op">=</span> <span class="fl">6</span><span class="op">)</span></span></code></pre></div>
-<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">θ</span> <span class="op">=</span> <span class="fl">3</span></span>
-<span><span class="va">ests</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="va">tauhats</span><span class="op">)</span></span>
-<span><span class="va">bounds</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/quantile.html" class="external-link">quantile</a></span><span class="op">(</span><span class="va">ests</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0.05</span>, <span class="fl">0.95</span><span class="op">)</span><span class="op">)</span></span>
-<span><span class="va">lb</span> <span class="op">=</span> <span class="fl">2.5</span>; <span class="va">ub</span> <span class="op">=</span> <span class="fl">3.5</span></span>
-<span></span>
-<span><span class="va">tauhats</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/t.html" class="external-link">t</a></span><span class="op">(</span><span class="va">tauhats</span><span class="op">)</span></span>
-<span></span>
-<span><span class="va">figm</span> <span class="op">=</span> \<span class="op">(</span><span class="va">x</span>, <span class="va">t</span><span class="op">)</span><span class="op">{</span></span>
-<span>    <span class="fu"><a href="https://rdrr.io/r/graphics/hist.html" class="external-link">hist</a></span><span class="op">(</span><span class="va">x</span>, breaks<span class="op">=</span><span class="fl">100</span>, main<span class="op">=</span><span class="va">t</span>, xlab<span class="op">=</span><span class="st">""</span>, ylab<span class="op">=</span><span class="st">""</span>, xlim <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="va">lb</span>, <span class="va">ub</span><span class="op">)</span><span class="op">)</span></span>
-<span>    <span class="fu"><a href="https://rdrr.io/r/graphics/abline.html" class="external-link">abline</a></span><span class="op">(</span>v <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html" class="external-link">mean</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span>, col <span class="op">=</span> <span class="st">'blue'</span><span class="op">)</span>; <span class="fu"><a href="https://rdrr.io/r/graphics/abline.html" class="external-link">abline</a></span><span class="op">(</span>v <span class="op">=</span> <span class="va">θ</span>, col <span class="op">=</span> <span class="st">'red'</span><span class="op">)</span></span>
-<span><span class="op">}</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/graphics/par.html" class="external-link">par</a></span><span class="op">(</span>mfrow <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">3</span>, <span class="fl">2</span><span class="op">)</span><span class="op">)</span></span>
-<span><span class="fu">figm</span><span class="op">(</span><span class="va">tauhats</span><span class="op">[</span>,<span class="fl">1</span><span class="op">]</span>,<span class="st">"Naive Post"</span><span class="op">)</span></span>
-<span><span class="fu">figm</span><span class="op">(</span><span class="va">tauhats</span><span class="op">[</span>,<span class="fl">2</span><span class="op">]</span>,<span class="st">"DiD"</span><span class="op">)</span></span>
-<span><span class="fu">figm</span><span class="op">(</span><span class="va">tauhats</span><span class="op">[</span>,<span class="fl">3</span><span class="op">]</span>,<span class="st">"IPW FS"</span><span class="op">)</span></span>
-<span><span class="fu">figm</span><span class="op">(</span><span class="va">tauhats</span><span class="op">[</span>,<span class="fl">4</span><span class="op">]</span>,<span class="st">"IPW XF"</span><span class="op">)</span></span>
-<span><span class="fu">figm</span><span class="op">(</span><span class="va">tauhats</span><span class="op">[</span>,<span class="fl">5</span><span class="op">]</span>,<span class="st">"AIPW FS"</span><span class="op">)</span></span>
-<span><span class="fu">figm</span><span class="op">(</span><span class="va">tauhats</span><span class="op">[</span>,<span class="fl">6</span><span class="op">]</span>,<span class="st">"AIPW XF"</span><span class="op">)</span></span></code></pre></div>
-<p><img src="basics_files/figure-html/unnamed-chunk-4-1.png" width="700" style="display: block; margin: auto;"></p>
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/graphics/par.html" class="external-link">par</a></span><span class="op">(</span>mfrow <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">4</span>, <span class="fl">2</span><span class="op">)</span>, mar <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">5</span>, <span class="fl">0</span>, <span class="fl">4</span>, <span class="fl">0</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="fu">distPlot</span><span class="op">(</span><span class="va">ests2</span><span class="op">[</span><span class="fl">1</span>, <span class="op">]</span>, <span class="st">"naive"</span>, lb <span class="op">=</span> <span class="fl">2</span>, ub <span class="op">=</span> <span class="fl">4</span><span class="op">)</span></span>
+<span><span class="fu">distPlot</span><span class="op">(</span><span class="va">ests2</span><span class="op">[</span><span class="fl">2</span>, <span class="op">]</span>, <span class="st">"did"</span>, lb <span class="op">=</span> <span class="fl">2</span>, ub <span class="op">=</span> <span class="fl">4</span><span class="op">)</span></span>
+<span><span class="fu">distPlot</span><span class="op">(</span><span class="va">ests2</span><span class="op">[</span><span class="fl">3</span>, <span class="op">]</span>, <span class="st">"om"</span>, lb <span class="op">=</span> <span class="fl">2</span>, ub <span class="op">=</span> <span class="fl">4</span><span class="op">)</span></span>
+<span><span class="fu">distPlot</span><span class="op">(</span><span class="va">ests2</span><span class="op">[</span><span class="fl">4</span>, <span class="op">]</span>, <span class="st">"omXF"</span>, lb <span class="op">=</span> <span class="fl">2</span>, ub <span class="op">=</span> <span class="fl">4</span><span class="op">)</span></span>
+<span><span class="fu">distPlot</span><span class="op">(</span><span class="va">ests2</span><span class="op">[</span><span class="fl">5</span>, <span class="op">]</span>, <span class="st">"ipw"</span>, lb <span class="op">=</span> <span class="fl">2</span>, ub <span class="op">=</span> <span class="fl">4</span><span class="op">)</span></span>
+<span><span class="fu">distPlot</span><span class="op">(</span><span class="va">ests2</span><span class="op">[</span><span class="fl">6</span>, <span class="op">]</span>, <span class="st">"ipwXF"</span>, lb <span class="op">=</span> <span class="fl">2</span>, ub <span class="op">=</span> <span class="fl">4</span><span class="op">)</span></span>
+<span><span class="fu">distPlot</span><span class="op">(</span><span class="va">ests2</span><span class="op">[</span><span class="fl">7</span>, <span class="op">]</span>, <span class="st">"aipw"</span>, lb <span class="op">=</span> <span class="fl">2</span>, ub <span class="op">=</span> <span class="fl">4</span><span class="op">)</span></span>
+<span><span class="fu">distPlot</span><span class="op">(</span><span class="va">ests2</span><span class="op">[</span><span class="fl">8</span>, <span class="op">]</span>, <span class="st">"aipwXF"</span>, lb <span class="op">=</span> <span class="fl">2</span>, ub <span class="op">=</span> <span class="fl">4</span><span class="op">)</span></span></code></pre></div>
+<p><img src="basics_files/figure-html/unnamed-chunk-6-1.png" width="1152"></p>
 </div>
+<div class="section level2">
+<h2 id="references">References<a class="anchor" aria-label="anchor" href="#references"></a>
+</h2>
+<ul>
+<li><p>Abadie, A. (2005): “Semiparametric Difference-in-Differences Estimators,” The Review of economic studies, 72, 1–19.</p></li>
+<li><p>Chang, Neng-Chieh (2020): “Double/debiased machine learning for difference-in-differences models.” The Econometrics Journal , 177-191.</p></li>
+</ul>
 </div>
-  </div>
-
-  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
-
-        <nav id="toc" data-toggle="toc"><h2 data-toc-skip>Contents</h2>
-    </nav>
-</div>
-
+  </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
+    </nav></aside>
 </div>
 
 
 
-      <footer><div class="copyright">
+    <footer><div class="pkgdown-footer-left">
   <p></p>
 <p>Developed by Apoorva Lal.</p>
 </div>
 
-<div class="pkgdown">
+<div class="pkgdown-footer-right">
   <p></p>
 <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.6.</p>
 </div>
 
-      </footer>
+    </footer>
 </div>
 
   
-
 
   
 
