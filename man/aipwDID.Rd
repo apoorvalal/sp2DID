@@ -5,7 +5,7 @@
 \title{Chang (2020) Double-Robust semiparametric difference in differences
 estimator for the ATT fit using LASSO}
 \usage{
-aipwDID(X, D, Y1, Y0, xfit = TRUE)
+aipwDID(X, D, Y1, Y0)
 }
 \arguments{
 \item{X}{NxK matrix of covariates for propensity score}

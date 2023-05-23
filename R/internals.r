@@ -3,11 +3,7 @@
 # multinomial logit because predicted values are in a matrix
 
 fitGet = \(m){
-  m$fit.preval[
-    ,
-    !is.na(colSums(m$fit.preval))
-  ][
-    ,
+  m$fit.preval[, !is.na(colSums(m$fit.preval))][,
     m$lambda[!is.na(colSums(m$fit.preval))] == m$lambda.min
   ]
 }

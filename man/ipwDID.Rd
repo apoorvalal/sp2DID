@@ -5,7 +5,7 @@
 \title{Abadie (2005) semiparametric difference in differences estimator for the
 ATT fit using LASSO}
 \usage{
-ipwDID(X, D, Y1, Y0, xfit = TRUE)
+ipwDID(X, D, Y1, Y0)
 }
 \arguments{
 \item{X}{NxK matrix of covariates for propensity score}
