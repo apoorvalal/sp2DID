@@ -27,11 +27,9 @@ aipwDID = function(X, D, Y1, Y0) {
   #' @return ATT estimate
   #' @references  Chang(2020), Zhao and Sant'Anna (2021)
   #' @export
-
   k_folds = floor(max(3, min(10, length(D) / 4)))
   # fold ID for cross-validation; balance treatment assignments
   foldid = sample(rep(seq(k_folds), length = length(D)))
-
   # ps model
   psfit = glmnet::cv.glmnet(X, D, family = "binomial", alpha = 1, foldid = foldid, keep = TRUE)
   # trend model
@@ -79,6 +77,22 @@ omDID = function(X, D, Y1, Y0) {
   m4hat = predict(m4, newx = X, s = m4$lambda.min)
   mean((m1hat - m2hat) - (m3hat - m4hat))
 }
+
+# %%
+balDID = function(X, W, Y1, Y0) {
+  #' semiparametric difference in differences estimator for the ATT (balancing weights)
+  #' @param X NxK matrix of covariates for propensity score
+  #' @param W N-vector of treatment assignments (treatment only applies in period 2)
+  #' @param Y1 N-vector of outcomes in the second period
+  #' @param Y0 N-vector of outcomes in the first period
+  #' @return ATT estimate
+  #' @references Abadie(2005)
+  #' @export
+  ω = ebal::ebalance(W, X, method = "AutoDiff")$w
+  Δ = Y1 - Y0
+  mean(Δ[W == 1]) - weighted.mean(Δ[W == 0], ω)
+}
+
 
 # %%
 abalDID = function(X, D, Y1, Y0) {

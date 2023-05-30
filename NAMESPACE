@@ -3,5 +3,6 @@
 export(DID)
 export(abalDID)
 export(aipwDID)
+export(balDID)
 export(ipwDID)
 export(omDID)
